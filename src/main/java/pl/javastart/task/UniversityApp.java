@@ -68,6 +68,8 @@ public class UniversityApp {
     /**
      * Dodaje ocenę końcową dla wskazanego studenta i grupy.
      * Student musi być wcześniej zapisany do grupy za pomocą {@link #addStudentToGroup(int, String, String, String)}
+     * W przypadku, gdy grupa o wskazanym kodzie nie istnieje, wyświetlany jest komunikat postaci:
+     * "Grupa pp-2022 nie istnieje"
      * W przypadku gdy student nie jest zapisany do grupy, wyświetlany jest komunikat w
      * postaci: "Student o indeksie 179128 nie jest zapisany do grupy pp-2022"
      * W przypadku gdy ocena końcowa już istnieje, wyświetlany jest komunikat w postaci:
