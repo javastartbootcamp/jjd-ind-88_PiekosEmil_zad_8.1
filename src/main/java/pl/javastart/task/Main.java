@@ -2,7 +2,6 @@ package pl.javastart.task;
 
 public class Main {
 
-    // uzupełnij metody w UniversityApp zgodnie z dokumentacją
     public static void main(String[] args) {
         UniversityApp universityApp = new UniversityApp();
 
