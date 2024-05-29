@@ -13,7 +13,6 @@ public class UniversityApp {
      * @param lastName  - nazwisko prowadzącego
      */
     public void createLecturer(int id, String degree, String firstName, String lastName) {
-
     }
 
     /**
@@ -28,9 +27,9 @@ public class UniversityApp {
      * @param lecturerId - identyfikator prowadzącego. Musi zostać wcześniej utworzony za pomocą metody {@link #createLecturer(int, String, String, String)}
      */
     public void createGroup(String code, String name, int lecturerId) {
-
+        Group group = new Group();
+        group.createGroup(code, name, lecturerId);
     }
-
 
     /**
      * Dodaje studenta do grupy zajęciowej.
@@ -43,9 +42,10 @@ public class UniversityApp {
      * @param lastName  - nazwisko studenta
      */
     public void addStudentToGroup(int index, String groupCode, String firstName, String lastName) {
+        Student student = new Student();
+        student.addStudentToGroup(index, groupCode, firstName, lastName);
 
     }
-
 
     /**
      * Wyświetla informacje o grupie w zadanym formacie.
@@ -62,7 +62,8 @@ public class UniversityApp {
      * @param groupCode - kod grupy, dla której wyświetlić informacje
      */
     public void printGroupInfo(String groupCode) {
-
+        String info = Group.groupInfo(groupCode);
+        System.out.println(info);
     }
 
     /**
@@ -117,6 +118,7 @@ public class UniversityApp {
      * 189521 Anna Kowalska
      */
     public void printAllStudents() {
-
+        String info = Student.studentInfo();
+        System.out.println(info);
     }
 }
